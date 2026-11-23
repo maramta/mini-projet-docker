@@ -17,7 +17,7 @@ Image : `taweli/app`
 
 ```bash
 docker run -d --name mon-app \
-  -p 8080:5000 \
+  -p 8081:5000 \
   -e MESSAGE_ACCUEIL="Salut les DevOps" \
   --memory 256m --cpus 0.5 \
   taweli/app:1.0.1
@@ -26,7 +26,7 @@ docker run -d --name mon-app \
 Vérifier :
 
 ```bash
-curl http://localhost:8080
+curl http://localhost:8081
 docker logs mon-app
 ```
 
@@ -47,7 +47,7 @@ Sans `-e`, la valeur par défaut est utilisée.
 ## Port
 
 L'application écoute sur le port `5000` dans le conteneur. L'exemple
-ci-dessus le publie sur le port `8080` de l'hôte.
+ci-dessus le publie sur le port `8081` de l'hôte.
 
 ## Construire l'image soi-même
 
